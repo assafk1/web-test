@@ -1,0 +1,10 @@
+<div class="showContainer">
+  <div *ngFor="let sli of sliders" id={{sli.imId}} [ngClass]="{'imageContainer': true, 
+                                                              'slide-in-right': index == sli.index && nextPushed,
+                                                              'slide-in-left': index == sli.index && prevPushed, 
+                                                              'slide-out-right': index == ((sli.index+1) % sliders.length) && nextPushed,
+                                                              'slide-out-left': index == ((sli.index+2) % sliders.length) && prevPushed }">
+    <img src={{sli.url}} class="slideshowImg"/>
+  </div>
+  <div class="prev navBut" (click)="prev()">&lt;</div><div class="next navBut" (click)="next()">&gt;</div>
+</div>

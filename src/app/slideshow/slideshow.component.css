@@ -1,0 +1,105 @@
+    .slideshowImg {
+        height: 100%;
+        width: 100%;
+    }
+    .showContainer {
+        position:relative;
+        height: 100px;
+        width: 300px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+        border: #000000;
+        border-width: 1px;
+        border-style: solid;
+        margin: auto;
+    }
+
+    @media screen and (min-width:500px) {
+        .showContainer {
+            height: 166px;
+            width: 500px;
+        }
+    }
+    
+    @media screen and (max-width:500px) {
+        .showContainer {
+            height: 100px;
+            width: 300px;
+        }
+    }
+
+    .imageContainer {
+        position:absolute;
+        height: 100%;
+        width: 100%;
+    }
+    .navBut {
+        vertical-align: middle;
+        text-align: center;
+        z-index:10;
+        font-size:40px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: bold;
+    }
+    .navBut:hover {
+        color: rgb(155, 155, 155);
+        animation-name: navButHover;
+        animation-duration: 0.5s;
+    }
+
+    @keyframes navButHover {
+        from {color: black;}
+        to {color: rgb(155, 155, 155);}
+    }
+    .slide-out-right {
+        animation-name:slide-out-right;
+        animation-duration: 1s;
+        left: 100%;
+        /* display: none; */
+        z-index: 5;
+    }
+    
+    @keyframes slide-out-right {
+        from {left:0;}
+        to {left:100%;}
+    }
+    
+    .slide-out-left {
+        animation-name:slide-out-left;
+        animation-duration: 1s;
+        left: 100%;
+        /* display: none; */
+        z-index: 5;
+    }
+    
+    @keyframes slide-out-left {
+        from {left:0;}
+        to {left:-100%;}
+    }
+    
+    .slide-in-left {
+        animation-name:slide-in-left;
+        animation-duration: 1s;
+        left: 0;
+        z-index: 5;
+    }
+    
+    @keyframes slide-in-left {
+        from {left:100%;}
+        to {left:0;}
+    }
+    
+    .slide-in-right {
+        animation-name:slide-in-right;
+        animation-duration: 1s;
+        left: 0;
+        z-index: 5;
+    }
+    
+    @keyframes slide-in-right {
+        from {left:-100%;}
+        to {left:0;}
+    }
